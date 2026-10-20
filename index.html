@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <!-- Primary Meta Tags -->
+  <title>Arif Alam Ansari | Generative AI Engineer & Multi-Agent Systems Architect</title>
+  <meta name="title" content="Arif Alam Ansari | Generative AI Engineer & Multi-Agent Systems Architect" />
+  <meta name="description"
+    content="Portfolio of Arif Alam Ansari, Generative AI Engineer specializing in LangGraph, AutoGen, CrewAI, RAG pipelines, Model Context Protocol (MCP), and containerized edge AI architectures." />
+  <meta name="keywords"
+    content="Arif Alam Ansari, Generative AI Engineer, Multi-Agent Systems, LangGraph, AutoGen, CrewAI, RAG, MCP, AI Portfolio, Machine Learning, TensorFlow CNN" />
+  <meta name="author" content="Arif Alam Ansari" />
+  <meta name="theme-color" content="#060911" />
+
+  <!-- Google Fonts: Outfit, Plus Jakarta Sans, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Three.js (for 3D WebGL Neural Swarm Background) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- Custom Cursor Elements -->
+  <div id="custom-cursor" class="custom-cursor"></div>
+  <div id="custom-cursor-follower" class="custom-cursor-follower"></div>
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress" class="scroll-progress-bar"></div>
+
+  <!-- Three.js 3D WebGL Swarm Canvas Container -->
+  <div id="bg-canvas-container"></div>
+
+  <!-- ==========================================================================
+       HEADER & FLOATING DOCK NAVBAR
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="nav-dock" id="nav-dock">
+      <!-- Brand Logo -->
+      <a href="#hero" class="brand-logo" aria-label="Arif Alam Ansari Home">
+        <div class="brand-avatar-badge">
+          <img src="arif_main_portrait.jpg" alt="Arif Alam Ansari" />
+        </div>
+        <div class="brand-text-block">
+          <span class="brand-name">
+            Arif Alam Ansari
+            <span class="brand-status-dot" title="Available for AI Engineering Engagements"></span>
+          </span>
+          <span class="brand-role">Generative AI Engineer</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#swarm-lab" class="nav-link">Agent Lab</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#certifications" class="nav-link">Certs</a></li>
+          <li><a href="#terminal" class="nav-link">CLI</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <!-- Audio FX Toggle -->
+        <button id="audio-toggle" class="audio-toggle-btn" aria-label="Toggle Cybernetic Audio Effects"
+          title="Toggle Audio FX">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <line x1="23" y1="9" x2="17" y2="15"></line>
+            <line x1="17" y1="9" x2="23" y2="15"></line>
+          </svg>
+        </button>
+
+        <!-- Resume Modal Trigger -->
+        <button class="btn btn-sm btn-primary open-resume-modal">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+          Resume
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Open mobile menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Drawer -->
+  <div id="mobile-nav-drawer" class="mobile-nav-drawer">
+    <button id="mobile-drawer-close" class="mobile-drawer-close" aria-label="Close mobile menu">&times;</button>
+    <a href="#about" class="nav-link">About Arif</a>
+    <a href="#swarm-lab" class="nav-link">Agent Swarm Lab</a>
+    <a href="#skills" class="nav-link">Specializations</a>
+    <a href="#projects" class="nav-link">Featured Projects</a>
+    <a href="#experience" class="nav-link">Experience</a>
+    <a href="#certifications" class="nav-link">Certifications</a>
+    <a href="#terminal" class="nav-link">Terminal Console</a>
+    <a href="#contact" class="nav-link">Contact Me</a>
+    <button class="btn btn-primary open-resume-modal" style="margin-top: 16px;">View Full Resume</button>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION (3D Stage + Parallax Portrait + Live Badges)
+         ========================================================================== -->
+    <section id="hero" class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+
+          <!-- Hero Left Content -->
+          <div class="hero-content">
+            <!-- Availability Badge -->
+            <div class="hero-status-pill">
+              <span class="ping-dot"></span>
+              <span>Available for Production AI & Agent Swarm Roles</span>
+            </div>
+
+            <!-- Title -->
+            <h1 class="hero-title">
+              Engineering <span class="gradient-text">Autonomous Multi-Agent</span> Ecosystems.
+            </h1>
+
+            <!-- Animated Typing Subtitle -->
+            <div class="hero-typed-wrapper">
+              <span>✦</span>
+              <span id="hero-typed-text">LangGraph & AutoGen Architect</span>
+              <span class="typed-cursor"></span>
+            </div>
+
+            <!-- Summary Statement -->
+            <p class="hero-summary">
+              Generative AI Engineer with 2+ years of production experience architecting scalable multi-agent systems
+              using
+              <strong>LangGraph</strong>, <strong>AutoGen</strong>, and <strong>CrewAI</strong>. Pioneer in Model
+              Context Protocol (MCP) standardization,
+              enterprise RAG pipelines, and offline containerized edge architectures for human-in-the-loop AI.
+            </p>
+
+            <!-- Stat Cards Row -->
+            <div class="hero-highlights-row">
+              <div class="hero-stat-card">
+                <div class="hero-stat-number gradient-text">2+</div>
+                <div class="hero-stat-label">Years Agentic Exp</div>
+              </div>
+              <div class="hero-stat-card">
+                <div class="hero-stat-number gradient-text-emerald">80%</div>
+                <div class="hero-stat-label">Research Time Saved</div>
+              </div>
+              <div class="hero-stat-card">
+                <div class="hero-stat-number gradient-text-purple">90%</div>
+                <div class="hero-stat-label">HITL Clinical Accuracy</div>
+              </div>
+              <div class="hero-stat-card">
+                <div class="hero-stat-number" style="color: #38bdf8;">95%</div>
+                <div class="hero-stat-label">CNN Agro Precision</div>
+              </div>
+            </div>
+
+            <!-- Primary Action Buttons -->
+            <div class="hero-cta-group">
+              <a href="#swarm-lab" class="btn btn-primary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </a>
+              Launch Agent Swarm Lab
+              </a>
+              <a href="#projects" class="btn btn-secondary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+                Explore Projects
+              </a>
+              <a href="#contact" class="btn btn-purple">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                Get in Touch
+              </a>
+            </div>
+
+            <!-- Social Links & Direct Contacts -->
+            <div class="hero-social-links">
+              <a href="https://github.com/Arifalam786" target="_blank" rel="noopener noreferrer" class="social-pill"
+                title="GitHub: Arifalam786">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg>
+                Arifalam786
+              </a>
+
+              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="social-pill"
+                title="LinkedIn: ARIF ALAM ANSARI">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                </svg>
+                LinkedIn
+              </a>
+
+              <button class="social-pill copy-trigger" data-copy="arifalam3101@gmail.com" title="Click to copy email">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                arifalam3101@gmail.com
+              </button>
+
+              <button class="social-pill copy-trigger" data-copy="+917678328092" title="Click to copy phone">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                  </path>
+                </svg>
+                +91 7678328092
+              </button>
+            </div>
+          </div>
+
+          <!-- Hero Right Stage: 3D Parallax Portrait Card & Orbiting Badges -->
+          <div class="hero-stage-container" id="hero-stage">
+
+            <!-- Floating 3D Badge: LangGraph Swarms -->
+            <div class="floating-badge badge-top-right">
+              <div class="badge-icon">🤖</div>
+              <div class="badge-text">LangGraph & AutoGen Swarms</div>
+            </div>
+
+            <!-- Floating 3D Badge: Model Context Protocol -->
+            <div class="floating-badge badge-bottom-left">
+              <div class="badge-icon">⚡</div>
+              <div class="badge-text">Model Context Protocol (MCP)</div>
+            </div>
+
+            <!-- Floating 3D Badge: Offline Containerized AI -->
+            <div class="floating-badge badge-mid-right">
+              <div class="badge-icon">🔒</div>
+              <div class="badge-text">Air-Gapped Edge Deployments</div>
+            </div>
+
+            <!-- 3D Photo Card -->
+            <div class="hero-photo-card" id="hero-card" data-tilt data-tilt-max="14">
+              <!-- Specular Glare Layer -->
+              <div class="specular-glare"
+                style="position: absolute; inset: 0; border-radius: 28px; pointer-events: none; z-index: 8; opacity: 0; transition: opacity 0.3s;">
+              </div>
+
+              <!-- HUD Laser Corners -->
+              <div class="hud-corner tl"></div>
+              <div class="hud-corner tr"></div>
+              <div class="hud-corner bl"></div>
+              <div class="hud-corner br"></div>
+
+              <!-- Photo Image -->
+              <div class="hero-photo-wrapper">
+                <img id="hero-portrait-img" src="arif_main_portrait.jpg"
+                  alt="Arif Alam Ansari - Generative AI Engineer" />
+                <div class="hero-photo-overlay"></div>
+              </div>
+
+              <!-- HUD Bottom Tag -->
+              <div class="hud-tag">
+                <span class="hud-tag-title" id="hud-name">Arif Alam Ansari</span>
+                <span class="hud-tag-subtitle" id="hud-role">Mountain Horizon // AI Engineer</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         INTERACTIVE MULTI-AGENT SWARM SIMULATION LAB
+         ========================================================================== -->
+    <section id="swarm-lab" class="swarm-lab-section">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+          <div class="section-badge">Interactive Agent Architecture</div>
+          <h2 class="section-title">
+            Experience the <span class="gradient-text">Autonomous Agent Swarm</span>
+          </h2>
+          <p class="section-desc">
+            Test real-world agent workflows architected by Arif. Watch intelligent multi-agent swarms
+            collaborate across LangGraph state machines, MCP tool execution, and Human-in-the-Loop gates.
+          </p>
+        </div>
+
+        <!-- Simulation Lab Container Card -->
+        <div class="swarm-lab-card">
+          <!-- Control Bar & Presets -->
+          <div class="swarm-controls-bar">
+            <div class="swarm-presets">
+              <button class="preset-chip active" data-preset="sales">
+                <span>⚡</span> Sales Acceleration Swarm
+              </button>
+              <button class="preset-chip" data-preset="medassist">
+                <span>🏥</span> MedEdge Offline FHIR Swarm
+              </button>
+              <button class="preset-chip" data-preset="agro">
+                <span>🥔</span> Plant Agro-Vision + AutoGen
+              </button>
+            </div>
+
+            <!-- Trigger Button -->
+            <button id="run-sim-btn" class="btn btn-primary btn-sm">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+              Run Agent Swarm Simulation
+            </button>
+          </div>
+
+          <!-- Swarm Stage (4 Sequential / Branching Nodes) -->
+          <div class="swarm-stage">
+            <!-- Node 0: Ingestion -->
+            <div class="swarm-agent-node" id="swarm-node-0">
+              <div class="agent-avatar-ring">📥</div>
+              <h3 class="agent-node-title">Salesforce Ingestion</h3>
+              <div class="agent-node-role">Input Agent</div>
+              <span class="agent-node-status">Ready</span>
+              <div class="swarm-connector"></div>
+            </div>
+
+            <!-- Node 1: Supervisor / Router -->
+            <div class="swarm-agent-node" id="swarm-node-1">
+              <div class="agent-avatar-ring">🧠</div>
+              <h3 class="agent-node-title">LangGraph Supervisor</h3>
+              <div class="agent-node-role">State Graph Router</div>
+              <span class="agent-node-status">Standby</span>
+              <div class="swarm-connector"></div>
+            </div>
+
+            <!-- Node 2: MCP Tool Calling / Deep Research -->
+            <div class="swarm-agent-node" id="swarm-node-2">
+              <div class="agent-avatar-ring">🌐</div>
+              <h3 class="agent-node-title">Deep Web Researcher</h3>
+              <div class="agent-node-role">MCP Tool Caller</div>
+              <span class="agent-node-status">Standby</span>
+              <div class="swarm-connector"></div>
+            </div>
+
+            <!-- Node 3: Synthesizer & Output Guardrail -->
+            <div class="swarm-agent-node" id="swarm-node-3">
+              <div class="agent-avatar-ring">⚡</div>
+              <h3 class="agent-node-title">Opportunity Synthesizer</h3>
+              <div class="agent-node-role">Executive Delivery</div>
+              <span class="agent-node-status">Standby</span>
+            </div>
+          </div>
+
+          <!-- Live Telemetry Log & Metrics Console -->
+          <div class="swarm-telemetry-box">
+            <div class="telemetry-header">
+              <span>● Agent Swarm Telemetry & Trace Logs</span>
+              <div class="telemetry-metric">
+                <span>Impact Metric: <strong class="metric-item" id="sim-metric-1">80% Research Time
+                    Saved</strong></span>
+                <span>Throughput: <strong class="metric-item" id="sim-metric-2">40 Daily Prioritized
+                    Opportunities</strong></span>
+              </div>
+            </div>
+            <div class="telemetry-log" id="sim-telemetry-log">
+              Preset loaded: <strong>Alliant Group Sales Acceleration</strong>. Press "Run Agent Swarm Simulation" to
+              observe real-time agent hand-offs.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ABOUT ME & ENGINEERING PHILOSOPHY (Featuring Mountain Photo)
+         ========================================================================== -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="about-grid">
+
+          <!-- Left: About Visual Card (Dedicated to Photo 2) -->
+          <div class="about-visual-card" data-tilt data-tilt-max="8">
+            <div class="about-img-frame">
+              <img id="about-display-img" src="arif_second.jpg" alt="Arif Alam Ansari - Generative AI Engineer" />
+              <div class="about-photo-tag-overlay">
+                <span class="about-tag-location">✦ High-Altitude Expedition &bull; Himalayas</span>
+              </div>
+            </div>
+            <div class="about-experience-badge">
+              <div class="badge-big-num">2+</div>
+              <div class="badge-big-label">Years Production AI</div>
+            </div>
+          </div>
+
+          <!-- Right: Narrative & Engineering Focus -->
+          <div class="about-content">
+            <div class="section-badge">About & Philosophy</div>
+            <h2 class="section-title">
+              Bridging Cutting-Edge LLMs with <span class="gradient-text">Deterministic Production Systems</span>
+            </h2>
+
+            <div class="about-story">
+              <p>
+                I am a <strong>Generative AI Engineer</strong> with a relentless passion for building autonomous agent
+                swarms that solve high-friction, mission-critical business bottlenecks. From building AI agents at
+                <strong>Alliant Group</strong> to deploying offline multi-agent medical systems at <strong>Sogeti (Part
+                  of Capgemini)</strong> for Johnson & Johnson, my mission is to turn cutting-edge foundation models
+                into robust, tamper-proof enterprise systems.
+              </p>
+              <p>
+                My architectural philosophy centers around four core pillars: <strong>State Machine Rigor
+                  (LangGraph)</strong> for cycle control, <strong>Protocol Standardization (Model Context Protocol -
+                  MCP)</strong> for scalable tool integration, <strong>Air-Gapped Edge Deployment (Docker & Raspberry
+                  Pi)</strong> for data privacy, and <strong>Human-in-the-Loop (HITL)</strong> governance for
+                zero-hallucination compliance.
+              </p>
+            </div>
+
+            <!-- Philosophy 4-Grid -->
+            <div class="philosophy-grid">
+              <div class="philosophy-card">
+                <div class="philosophy-icon">🤖</div>
+                <div class="philosophy-title">Agentic Orchestration</div>
+                <div class="philosophy-desc">LangGraph state graphs, AutoGen swarm agents & CrewAI collaborative
+                  workflows.</div>
+              </div>
+              <div class="philosophy-card">
+                <div class="philosophy-icon">⚡</div>
+                <div class="philosophy-title">Model Context Protocol</div>
+                <div class="philosophy-desc">Unified, standardized tool calling interfaces connecting agents to live
+                  APIs & DBs.</div>
+              </div>
+              <div class="philosophy-card">
+                <div class="philosophy-icon">🔒</div>
+                <div class="philosophy-title">Offline & Edge AI</div>
+                <div class="philosophy-desc">Containerized local SLMs and Raspberry Pi architectures for zero-internet
+                  networks.</div>
+              </div>
+              <div class="philosophy-card">
+                <div class="philosophy-icon">👁️</div>
+                <div class="philosophy-title">Deep Vision & Agro AI</div>
+                <div class="philosophy-desc">Custom TensorFlow CNN models with 95% classification accuracy on leaf
+                  diseases.</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SKILLS & AGENTIC TECH MATRIX
+         ========================================================================== -->
+    <section id="skills" class="skills-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">Technical Arsenal</div>
+          <h2 class="section-title">
+            Mastery Across the <span class="gradient-text">Agentic Stack</span>
+          </h2>
+          <p class="section-desc">
+            A comprehensive matrix of frameworks, foundation models, protocols, and deployment environments verified in
+            enterprise production.
+          </p>
+        </div>
+
+        <!-- Filter Category Tabs -->
+        <div class="skills-filter-bar">
+          <button class="filter-btn active" data-filter="all">All Disciplines</button>
+          <button class="filter-btn" data-filter="agents">Multi-Agent & Frameworks</button>
+          <button class="filter-btn" data-filter="llm">LLMs, SLMs & RAG</button>
+          <button class="filter-btn" data-filter="vision">Vision & Deep Learning</button>
+          <button class="filter-btn" data-filter="cloud">Cloud, Edge & Protocols</button>
+          <button class="filter-btn" data-filter="languages">Languages & DBs</button>
+        </div>
+
+        <!-- Skills Grid -->
+        <div class="skills-grid">
+
+          <!-- Skill: LangGraph -->
+          <div class="skill-card" data-category="agents">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap">🕸️</div>
+              <span class="skill-category-badge">Agentic Framework</span>
+            </div>
+            <h3 class="skill-name">LangGraph</h3>
+            <p class="skill-detail">Cyclic state graphs, checkpointing, multi-agent supervision, and human-in-the-loop
+              review nodes.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">StateGraph</span>
+              <span class="skill-tag">Supervisors</span>
+              <span class="skill-tag">Checkpointing</span>
+            </div>
+          </div>
+
+          <!-- Skill: AutoGen & CrewAI -->
+          <div class="skill-card" data-category="agents">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap">🤖</div>
+              <span class="skill-category-badge">Agentic Framework</span>
+            </div>
+            <h3 class="skill-name">AutoGen & CrewAI</h3>
+            <p class="skill-detail">Conversational agent swarms, role-playing agents, group chats, and hierarchical
+              orchestration.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">Conversational Swarms</span>
+              <span class="skill-tag">GroupChat</span>
+              <span class="skill-tag">Task Delegation</span>
+            </div>
+          </div>
+
+          <!-- Skill: Model Context Protocol (MCP) -->
+          <div class="skill-card" data-category="cloud">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap">⚡</div>
+              <span class="skill-category-badge">Standard Protocol</span>
+            </div>
+            <h3 class="skill-name">Model Context Protocol (MCP)</h3>
+            <p class="skill-detail">Anthropic standard toolchain protocol, building fast MCP servers and client
+              integrations for agent tool calling.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">MCP Servers</span>
+              <span class="skill-tag">FastMCP</span>
+              <span class="skill-tag">Tool Calling</span>
+            </div>
+          </div>
+
+          <!-- Skill: RAG & Vector Databases -->
+          <div class="skill-card" data-category="llm">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap">📚</div>
+              <span class="skill-category-badge">Knowledge Retrieval</span>
+            </div>
+            <h3 class="skill-name">Enterprise RAG & Vector DBs</h3>
+            <p class="skill-detail">Chunking strategies, hybrid search, semantic reranking, embedding pipelines, Chroma,
+              Qdrant, Pinecone.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">Hybrid Search</span>
+              <span class="skill-tag">Vector DBs</span>
+              <span class="skill-tag">Semantic Reranking</span>
+            </div>
+          </div>
+
+          <!-- Skill: SLMs & Fine-Tuning -->
+          <div class="skill-card" data-category="llm">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap">🧠</div>
+              <span class="skill-category-badge">Foundation Models</span>
+            </div>
+            <h3 class="skill-name">SLMs & Unsloth Fine-Tuning</h3>
+            <p class="skill-detail">Small Language Models (Phi-3, Llama 3, Mistral) fine-tuning with LoRA/QLoRA via
+              Unsloth for offline inference.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">Unsloth</span>
+              <span class="skill-tag">LoRA/QLoRA</span>
+              <span class="skill-tag">Local SLMs</span>
+            </div>
+          </div>
+
+          <!-- Skill: Computer Vision & CNNs -->
+          <div class="skill-card" data-category="vision">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap">👁️</div>
+              <span class="skill-category-badge">Deep Learning</span>
+            </div>
+            <h3 class="skill-name">Computer Vision & CNNs</h3>
+            <p class="skill-detail">TensorFlow deep convolutional architectures, OpenCV image processing, facial
+              recognition, agro disease classification.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">TensorFlow</span>
+              <span class="skill-tag">CNN 95% Acc</span>
+              <span class="skill-tag">OpenCV</span>
+            </div>
+          </div>
+
+          <!-- Skill: Containerized Offline AI & Edge -->
+          <div class="skill-card" data-category="cloud">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap">🔒</div>
+              <span class="skill-category-badge">Deployment Architecture</span>
+            </div>
+            <h3 class="skill-name">Offline Docker & Raspberry Pi</h3>
+            <p class="skill-detail">Zero-internet air-gapped hospital deployments, containerized microservices, local
+              LLM execution on edge devices.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">Docker Compose</span>
+              <span class="skill-tag">Raspberry Pi</span>
+              <span class="skill-tag">Air-Gapped AI</span>
+            </div>
+          </div>
+
+          <!-- Skill: Azure AI Studio & Cloud -->
+          <div class="skill-card" data-category="cloud">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap">☁️</div>
+              <span class="skill-category-badge">Cloud Platform</span>
+            </div>
+            <h3 class="skill-name">Azure AI Studio & MLOps</h3>
+            <p class="skill-detail">Azure AI Language, Vision, Document Intelligence, Logic Apps, continuous evaluation,
+              prompt flow pipelines.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">Azure AI Studio</span>
+              <span class="skill-tag">Logic Apps</span>
+              <span class="skill-tag">MLOps</span>
+            </div>
+          </div>
+
+          <!-- Skill: Programming Languages -->
+          <div class="skill-card" data-category="languages">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap">💻</div>
+              <span class="skill-category-badge">Core Languages</span>
+            </div>
+            <h3 class="skill-name">Python, TypeScript & C#</h3>
+            <p class="skill-detail">Production Python backend development (FastAPI, Flask, AsyncIO),
+              JavaScript/TypeScript, modern HTML5/CSS, C#, SQL.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">Python 3.12+</span>
+              <span class="skill-tag">FastAPI</span>
+              <span class="skill-tag">TypeScript</span>
+              <span class="skill-tag">SQL</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FEATURED PROJECTS SECTION (3D Tilt & Architecture Modals)
+         ========================================================================== -->
+    <section id="projects" class="projects-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">Production Showcase</div>
+          <h2 class="section-title">
+            Enterprise <span class="gradient-text">AI Systems in Production</span>
+          </h2>
+          <p class="section-desc">
+            Explore 5 battle-tested multi-agent applications architected for Alliant Group, Johnson & Johnson, and
+            open-source ecosystems. Click to inspect architecture diagrams and code.
+          </p>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+
+          <!-- Project 1: Sales Acceleration Engine -->
+          <div class="project-card" data-tilt data-tilt-max="10">
+            <div class="project-header-banner">
+              <div class="project-banner-decor"></div>
+              <div class="project-pill-client">Alliant Group</div>
+              <div class="project-icon-node">📈</div>
+            </div>
+            <div class="project-body">
+              <div class="project-timeframe">April 2025 - Present // Production</div>
+              <h3 class="project-title">Sales Acceleration Engine</h3>
+              <p class="project-description">
+                Autonomous multi-agent intelligence pipeline integrated with Salesforce. Solves deal overload for
+                Relationship Directors by prioritizing opportunities with business rules and running deep web research
+                on top 40 daily opportunities.
+              </p>
+              <div class="project-metrics-badge">
+                <span class="metrics-icon">★</span>
+                <span class="metrics-text">80% Research Time Saved | Top 40 Daily Briefings</span>
+              </div>
+              <div class="project-tech-stack">
+                <span class="tech-chip">Python</span>
+                <span class="tech-chip">LangGraph</span>
+                <span class="tech-chip">Salesforce API</span>
+                <span class="tech-chip">Logic Apps</span>
+              </div>
+              <div class="project-footer">
+                <button class="btn btn-sm btn-primary open-project-modal" data-project="sales">
+                  View Architecture & Code
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Strava MedEdge -->
+          <div class="project-card" data-tilt data-tilt-max="10">
+            <div class="project-header-banner">
+              <div class="project-banner-decor"></div>
+              <div class="project-pill-client">Capgemini - Johnson & Johnson Project</div>
+              <div class="project-icon-node">🏥</div>
+            </div>
+            <div class="project-body">
+              <div class="project-timeframe">Jul 2025 - Jan 2026 // Clinical AI</div>
+              <h3 class="project-title">Strava MedEdge — Offline Clinical Swarm</h3>
+              <p class="project-description">
+                Air-gapped, zero-internet multi-agent system analyzing surgical audio streams to generate standardized
+                FHIR clinical reports. Deployed inside hospital networks on edge hardware with ACP & MCP protocols.
+              </p>
+              <div class="project-metrics-badge">
+                <span class="metrics-icon">★</span>
+                <span class="metrics-text">Zero Cloud Dependency | 90% Accuracy with HITL</span>
+              </div>
+              <div class="project-tech-stack">
+                <span class="tech-chip">LangGraph</span>
+                <span class="tech-chip">Raspberry Pi</span>
+                <span class="tech-chip">Docker</span>
+                <span class="tech-chip">MCP Protocol</span>
+                <span class="tech-chip">FHIR</span>
+              </div>
+              <div class="project-footer">
+                <button class="btn btn-sm btn-primary open-project-modal" data-project="mededge">
+                  View Architecture & Code
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Med Assist -->
+          <div class="project-card" data-tilt data-tilt-max="10">
+            <div class="project-header-banner">
+              <div class="project-banner-decor"></div>
+              <div class="project-pill-client">Capgemini - Johnson & Johnson Project</div>
+              <div class="project-icon-node">📋</div>
+            </div>
+            <div class="project-body">
+              <div class="project-timeframe">Jan 2026 - March 2026 // Sprint AI</div>
+              <h3 class="project-title">Med Assist — Jira Sprint Orchestrator</h3>
+              <p class="project-description">
+                Autonomous workflow connecting to Jira REST API to automatically synthesize complex engineering
+                requirements into epics, user stories, subtasks, and test cases, eliminating manual documentation toil.
+              </p>
+              <div class="project-metrics-badge">
+                <span class="metrics-icon">★</span>
+                <span class="metrics-text">40% Documentation Effort Reduced</span>
+              </div>
+              <div class="project-tech-stack">
+                <span class="tech-chip">Python</span>
+                <span class="tech-chip">LangGraph</span>
+                <span class="tech-chip">LangChain</span>
+                <span class="tech-chip">Jira API</span>
+                <span class="tech-chip">Edge Logic</span>
+              </div>
+              <div class="project-footer">
+                <button class="btn btn-sm btn-primary open-project-modal" data-project="medassist">
+                  View Architecture & Code
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: Autonomous Multi-Agent Framework -->
+          <div class="project-card" data-tilt data-tilt-max="10">
+            <div class="project-header-banner">
+              <div class="project-banner-decor"></div>
+              <div class="project-pill-client">Capgemini</div>
+              <div class="project-icon-node">⚡</div>
+            </div>
+            <div class="project-body">
+              <div class="project-timeframe">Aug 2024 - Jul 2025 // Core Engine</div>
+              <h3 class="project-title">Autonomous Multi-Agent System Framework</h3>
+              <p class="project-description">
+                Unified no-code platform and API layer enabling non-technical teams to orchestrate and deploy
+                multi-agent swarms. Features MCP tool calling, RAG knowledge retrieval, and OpenCV facial recognition
+                security gates.
+              </p>
+              <div class="project-metrics-badge">
+                <span class="metrics-icon">★</span>
+                <span class="metrics-text">No-Code Multi-Agent Swarm Orchestration</span>
+              </div>
+              <div class="project-tech-stack">
+                <span class="tech-chip">AutoGen</span>
+                <span class="tech-chip">FastAPI</span>
+                <span class="tech-chip">SQL DB</span>
+                <span class="tech-chip">MCP</span>
+                <span class="tech-chip">OpenCV Vision</span>
+              </div>
+              <div class="project-footer">
+                <button class="btn btn-sm btn-primary open-project-modal" data-project="framework">
+                  View Architecture & Code
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5: Plant Diagnosing Expert -->
+          <div class="project-card" data-tilt data-tilt-max="10">
+            <div class="project-header-banner">
+              <div class="project-banner-decor"></div>
+              <div class="project-pill-client">Capgemini</div>
+              <div class="project-icon-node">🌱</div>
+            </div>
+            <div class="project-body">
+              <div class="project-timeframe">Jan 2025 // Vision + Agents</div>
+              <h3 class="project-title">Plant Diagnosing Expert with CNN & AutoGen</h3>
+              <p class="project-description">
+                AI application uniting deep learning computer vision (95% accuracy CNN classifier for potato leaf
+                pathologies) with AutoGen conversational agents for immediate agronomy diagnosis, treatment regimens,
+                and farmer advisory.
+              </p>
+              <div class="project-metrics-badge">
+                <span class="metrics-icon">★</span>
+                <span class="metrics-text">95% CNN Accuracy | Real-Time Agent Advisory</span>
+              </div>
+              <div class="project-tech-stack">
+                <span class="tech-chip">TensorFlow CNN</span>
+                <span class="tech-chip">AutoGen</span>
+                <span class="tech-chip">Flask</span>
+                <span class="tech-chip">OpenCV</span>
+              </div>
+              <div class="project-footer">
+                <button class="btn btn-sm btn-primary open-project-modal" data-project="plant">
+                  View Architecture & Code
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         PROFESSIONAL EXPERIENCE (Glowing Cyber-Timeline)
+         ========================================================================== -->
+    <section id="experience" class="experience-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">Career Trajectory</div>
+          <h2 class="section-title">
+            Engineering <span class="gradient-text">Journey & Milestones</span>
+          </h2>
+          <p class="section-desc">
+            A proven track record of deploying autonomous agentic workflows and multi-agent systems in enterprise
+            environments.
+          </p>
+        </div>
+
+        <div class="timeline-container">
+          <div class="timeline-line"></div>
+
+          <!-- Role 1: Alliant Group -->
+          <div class="timeline-item">
+            <div class="timeline-node-pin"></div>
+            <div class="timeline-card">
+              <div class="timeline-header-row">
+                <div>
+                  <h3 class="timeline-role">AI Engineer</h3>
+                  <div class="timeline-company">Alliant Group</div>
+                </div>
+                <div class="timeline-date-badge">April 2026 - Present</div>
+              </div>
+              <ul class="timeline-bullet-list">
+                <li>Building enterprise AI agents and agentic workflows to automate business processes, eliminate
+                  repetitive tasks, and deploy scalable production solutions.</li>
+                <li>Architecting autonomous Sales Acceleration multi-agent swarms integrated with Salesforce CRM and
+                  deep internet research crawlers.</li>
+                <li>Reduced relationship director research overhead by 80% with daily automated opportunity
+                  prioritization briefs.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Role 2: Sogeti (Capgemini) -->
+          <div class="timeline-item">
+            <div class="timeline-node-pin"></div>
+            <div class="timeline-card">
+              <div class="timeline-header-row">
+                <div>
+                  <h3 class="timeline-role">Analyst A4</h3>
+                  <div class="timeline-company">Sogeti (Part of Capgemini)</div>
+                </div>
+                <div class="timeline-date-badge">Aug 2024 – March 2026</div>
+              </div>
+              <ul class="timeline-bullet-list">
+                <li>Built enterprise-grade multi-agent system for medical transcription using LLMs, Agent Communication
+                  Protocol (ACP), and LangGraph.</li>
+                <li>Integrated autonomous agents with hospital APIs and zero-internet offline Docker container setups on
+                  edge Raspberry Pi devices.</li>
+                <li>Contributed to toolchain standardization across teams using the Model Context Protocol (MCP).</li>
+                <li>Implemented human-in-the-loop review architecture achieving 90% improved clinical documentation
+                  accuracy.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CERTIFICATIONS & EDUCATION (Holographic Foil Cards)
+         ========================================================================== -->
+    <section id="certifications" class="certs-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">Verified Credentials</div>
+          <h2 class="section-title">
+            Microsoft Azure & <span class="gradient-text">Academic Qualifications</span>
+          </h2>
+          <p class="section-desc">
+            Official certifications validated by Microsoft in Azure AI, Natural Language Processing, Vision, and
+            Document Intelligence.
+          </p>
+        </div>
+
+        <!-- Certs Grid -->
+        <div class="certs-grid">
+
+          <div class="cert-card">
+            <div class="cert-issuer-badge">
+              <span class="cert-issuer-text">Microsoft Certified</span>
+            </div>
+            <h3 class="cert-title">Azure AI Engineer Associate</h3>
+            <div class="cert-meta">
+              <span class="cert-status-verified">✔ Verified Credential</span>
+              <span>Azure AI Studio</span>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-issuer-badge">
+              <span class="cert-issuer-text">Microsoft Certified</span>
+            </div>
+            <h3 class="cert-title">Azure AI Fundamentals (AI900)</h3>
+            <div class="cert-meta">
+              <span class="cert-status-verified">✔ Verified Credential</span>
+              <span>Machine Learning Core</span>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-issuer-badge">
+              <span class="cert-issuer-text">Microsoft Certified</span>
+            </div>
+            <h3 class="cert-title">Azure Fundamentals (AZ900)</h3>
+            <div class="cert-meta">
+              <span class="cert-status-verified">✔ Verified Credential</span>
+              <span>Cloud Infrastructure</span>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-issuer-badge">
+              <span class="cert-issuer-text">Microsoft Specialization</span>
+            </div>
+            <h3 class="cert-title">Build NLP Solutions with Azure AI Language</h3>
+            <div class="cert-meta">
+              <span class="cert-status-verified">✔ Verified Credential</span>
+              <span>Text Analytics & LLM</span>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-issuer-badge">
+              <span class="cert-issuer-text">Microsoft Specialization</span>
+            </div>
+            <h3 class="cert-title">Build an Azure AI Vision Solution</h3>
+            <div class="cert-meta">
+              <span class="cert-status-verified">✔ Verified Credential</span>
+              <span>Computer Vision Core</span>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-issuer-badge">
+              <span class="cert-issuer-text">Microsoft Specialization</span>
+            </div>
+            <h3 class="cert-title">Intelligent Document Processing (AI Doc Intelligence)</h3>
+            <div class="cert-meta">
+              <span class="cert-status-verified">✔ Verified Credential</span>
+              <span>Document Extraction</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Education Wrapper -->
+        <div class="edu-wrapper">
+          <div class="section-header" style="margin-bottom: 32px;">
+            <div class="section-badge">Academic Background</div>
+            <h3 style="font-size: 1.8rem; font-weight: 800;">Formal Engineering Education</h3>
+          </div>
+
+          <div class="edu-grid">
+            <div class="edu-card">
+              <div class="edu-degree">Bachelor of Technology (B.Tech)</div>
+              <div class="edu-inst">Noida Institute of Engineering and Technology (NIET)</div>
+              <div class="edu-year">2020 - 2024</div>
+            </div>
+
+            <div class="edu-card">
+              <div class="edu-degree">Intermediate Education</div>
+              <div class="edu-inst">Fr. Agnel School, Greater Noida</div>
+              <div class="edu-year">Completed 2020</div>
+            </div>
+
+            <div class="edu-card">
+              <div class="edu-degree">High School Education</div>
+              <div class="edu-inst">Alexander Public School, Meerut</div>
+              <div class="edu-year">Completed 2018</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         INTERACTIVE "ARIF-CLI" TERMINAL CONSOLE
+         ========================================================================== -->
+    <section id="terminal" class="terminal-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">Interactive Console</div>
+          <h2 class="section-title">
+            Execute <span class="gradient-text">Arif-CLI Commands</span>
+          </h2>
+          <p class="section-desc">
+            Directly probe Arif's architecture background, swarm protocols, and credentials via an interactive
+            in-browser terminal emulator.
+          </p>
+        </div>
+
+        <div class="terminal-window">
+          <!-- Terminal Header Bar -->
+          <div class="terminal-header-bar">
+            <div class="terminal-dots">
+              <span class="terminal-dot dot-red"></span>
+              <span class="terminal-dot dot-yellow"></span>
+              <span class="terminal-dot dot-green"></span>
+            </div>
+            <div class="terminal-title-bar">arif@agent-swarm:~ (zsh) — v2.4.0</div>
+            <div style="font-size: 0.7rem; color: var(--emerald);">● ONLINE</div>
+          </div>
+
+          <!-- Quick Action Prompt Chips -->
+          <div class="terminal-quick-prompts">
+            <span style="font-size: 0.72rem; color: var(--text-dim); margin-right: 4px;">Click to run:</span>
+            <button class="prompt-chip" data-cmd="about">about</button>
+            <button class="prompt-chip" data-cmd="skills">skills</button>
+            <button class="prompt-chip" data-cmd="projects">projects</button>
+            <button class="prompt-chip" data-cmd="experience">experience</button>
+            <button class="prompt-chip" data-cmd="certs">certs</button>
+            <button class="prompt-chip" data-cmd="hire">hire</button>
+            <button class="prompt-chip" data-cmd="cat resume.txt">cat resume.txt</button>
+            <button class="prompt-chip" data-cmd="clear">clear</button>
+          </div>
+
+          <!-- Terminal Output Body -->
+          <div class="terminal-body" id="terminal-output">
+            <div class="terminal-output-line" style="color: #64748b;">
+              Initializing Arif Alam Ansari Autonomous Agent Shell...<br />
+              Connected to LangGraph state machine & MCP tool registry. Type <strong
+                style="color: #00f0ff;">help</strong> for command listing.
+            </div>
+          </div>
+
+          <!-- Interactive Input Line -->
+          <div class="terminal-prompt-line"
+            style="padding: 12px 24px; background: #070d1a; border-top: 1px solid var(--border-subtle);">
+            <span class="terminal-prompt-sym">arif@agent-swarm:~$</span>
+            <input type="text" id="terminal-input" class="terminal-input"
+              placeholder="Type a command (e.g. skills, projects, contact, help)..." autocomplete="off"
+              spellcheck="false" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CONTACT SECTION & DIRECT CONNECT
+         ========================================================================== -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">Start Collaboration</div>
+          <h2 class="section-title">
+            Let's Build the <span class="gradient-text">Next Agentic Breakthrough</span>
+          </h2>
+          <p class="section-desc">
+            Whether you are scaling enterprise multi-agent workflows, integrating Model Context Protocol, or designing
+            offline containerized AI — let's connect.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+
+          <!-- Contact Details Cards -->
+          <div class="contact-info-card">
+            <h3 style="font-size: 1.4rem; font-weight: 800; color: #fff;">Direct Communication</h3>
+
+            <!-- Email -->
+            <div class="contact-method-item">
+              <div class="contact-method-icon">✉</div>
+              <div class="contact-method-content">
+                <div class="contact-method-label">Direct Email</div>
+                <a href="mailto:arifalam3101@gmail.com" class="contact-method-val">arifalam3101@gmail.com</a>
+                <div>
+                  <button class="copy-btn copy-trigger" data-copy="arifalam3101@gmail.com">Copy Email</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="contact-method-item">
+              <div class="contact-method-icon">📞</div>
+              <div class="contact-method-content">
+                <div class="contact-method-label">Direct Phone / WhatsApp</div>
+                <a href="tel:+917678328092" class="contact-method-val">+91 7678328092</a>
+                <div>
+                  <button class="copy-btn copy-trigger" data-copy="+917678328092">Copy Phone</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- GitHub -->
+            <div class="contact-method-item">
+              <div class="contact-method-icon">🐙</div>
+              <div class="contact-method-content">
+                <div class="contact-method-label">GitHub Repository</div>
+                <a href="https://github.com/Arifalam786" target="_blank" rel="noopener noreferrer"
+                  class="contact-method-val">github.com/Arifalam786</a>
+              </div>
+            </div>
+
+            <!-- LinkedIn -->
+            <div class="contact-method-item">
+              <div class="contact-method-icon">💼</div>
+              <div class="contact-method-content">
+                <div class="contact-method-label">LinkedIn Profile</div>
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"
+                  class="contact-method-val">ARIF ALAM ANSARI</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Contact Form -->
+          <div class="contact-form-card">
+            <h3 style="font-size: 1.4rem; font-weight: 800; color: #fff; margin-bottom: 20px;">Send a Direct Message
+            </h3>
+            <form id="contact-form">
+              <div class="form-group">
+                <label class="form-label" for="form-name">Your Full Name *</label>
+                <input type="text" id="form-name" class="form-input" placeholder="e.g. Sarah Connor" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="form-email">Work Email *</label>
+                <input type="email" id="form-email" class="form-input" placeholder="e.g. sarah@enterprise.ai"
+                  required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="form-subject">Subject</label>
+                <input type="text" id="form-subject" class="form-input"
+                  placeholder="e.g. Multi-Agent System Architecture Discussion" />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="form-message">Project or Inquiry Details *</label>
+                <textarea id="form-message" class="form-textarea"
+                  placeholder="Describe your team's objective, timeline, and agentic requirements..."
+                  required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+                Dispatch Message to Arif
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <a href="#hero" class="brand-logo">
+          <div class="brand-avatar-badge">
+            <img src="arif_main_portrait.jpg" alt="Arif Alam Ansari" />
+          </div>
+          <div class="brand-text-block">
+            <span class="brand-name">Arif Alam Ansari</span>
+            <span class="brand-role">Generative AI Engineer & Agent Architect</span>
+          </div>
+        </a>
+
+        <div style="display: flex; gap: 12px; align-items: center;">
+          <a href="#about" class="nav-link">About</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#certifications" class="nav-link">Credentials</a>
+          <a href="#contact" class="nav-link">Connect</a>
+          <button class="btn btn-sm btn-primary open-resume-modal">Resume</button>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Arif Alam Ansari. Built with Vanilla CSS, Three.js 3D & Agentic Workflows.</div>
+        <div>Greater Noida &bull; Meerut &bull; Global Remote</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- ==========================================================================
+       PROJECT DEEP-DIVE MODAL
+       ========================================================================== -->
+  <div id="project-modal" class="modal-backdrop">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+      <div id="project-modal-body">
+        <!-- Injected dynamically via app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       FULL RESUME PREVIEW MODAL
+       ========================================================================== -->
+  <div id="resume-modal" class="modal-backdrop">
+    <div class="modal-dialog" style="max-width: 900px;">
+      <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+
+      <div
+        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--border-subtle);">
+        <h2 style="font-size: 1.8rem; font-weight: 800;">Curriculum Vitae</h2>
+        <div style="display: flex; gap: 10px;">
+          <button id="print-resume-btn" class="btn btn-sm btn-primary">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 6 2 18 2 18 9"></polyline>
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+              <rect x="6" y="14" width="12" height="8"></rect>
+            </svg>
+            Print / Save PDF
+          </button>
+        </div>
+      </div>
+
+      <!-- Rendered Resume Content matching exact CV -->
+      <div
+        style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 32px; font-family: var(--font-body); color: #e2e8f0; line-height: 1.6;">
+        <div
+          style="text-align: center; margin-bottom: 24px; padding-bottom: 18px; border-bottom: 1px solid var(--border-subtle);">
+          <h1 style="font-size: 2.2rem; font-weight: 900; margin-bottom: 6px; color: #fff;">Arif Alam Ansari</h1>
+          <div
+            style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; font-family: var(--font-mono); font-size: 0.82rem; color: var(--cyan);">
+            <span>🐙 Arifalam786</span>
+            <span>💼 ARIF ALAM ANSARI</span>
+            <span>✉ arifalam3101@gmail.com</span>
+            <span>📞 +91 7678328092</span>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 20px;">
+          <h3
+            style="color: var(--cyan); font-family: var(--font-mono); font-size: 0.88rem; text-transform: uppercase; margin-bottom: 6px; letter-spacing: 0.05em;">
+            SUMMARY</h3>
+          <p style="font-size: 0.95rem; color: #cbd5e1;">
+            I am a Generative AI Engineer with 2 years of hands-on experience building secure, scalable multi-agent
+            systems using LLMs, LangGraph, Autogen, and CrewAI. Skilled in designing agentic workflows, integrating RAG
+            pipelines, and developing offline, containerized architectures for human-in-the-loop AI.
+          </p>
+        </div>
+
+        <div style="margin-bottom: 20px;">
+          <h3
+            style="color: var(--cyan); font-family: var(--font-mono); font-size: 0.88rem; text-transform: uppercase; margin-bottom: 8px; letter-spacing: 0.05em;">
+            SKILLS</h3>
+          <p style="font-size: 0.9rem; margin-bottom: 4px;"><strong>Languages:</strong> Python, JavaScript/TypeScript,
+            HTML/CSS, C#, SQL</p>
+          <p style="font-size: 0.9rem; margin-bottom: 4px;"><strong>Frameworks & Tools:</strong> Autogen, Langgraph,
+            Langchain, Crewai, Computer Vision, Flask, FastAPI, Tensorflow, Streamlit, Unsloth</p>
+          <p style="font-size: 0.9rem;"><strong>AI/ML & Cloud:</strong> RAG, SLM, LLMs (GPT, Claude, etc.), Vector
+            Databases, CNN, Tensorflow, Azure AI Studio, Prompt engineering, API integration, Cloud Deployment, LLM fine
+            tuning, Vector search, MLOps, Cursor AI, Claude code, Copilot Studio</p>
+        </div>
+
+        <div style="margin-bottom: 20px;">
+          <h3
+            style="color: var(--cyan); font-family: var(--font-mono); font-size: 0.88rem; text-transform: uppercase; margin-bottom: 12px; letter-spacing: 0.05em;">
+            EXPERIENCE</h3>
+
+          <div style="margin-bottom: 14px;">
+            <div style="display: flex; justify-content: space-between; font-weight: 700; color: #fff;">
+              <span>Alliant Group | AI Engineer</span>
+              <span style="color: var(--cyan); font-family: var(--font-mono); font-size: 0.85rem;">April 2026 -
+                Present</span>
+            </div>
+            <p style="font-size: 0.9rem; color: #94a3b8; margin-top: 4px;">
+              Building AI agents and agentic workflows to automate business processes, eliminate repetitive tasks, and
+              deploy scalable production solutions.
+            </p>
+          </div>
+
+          <div>
+            <div style="display: flex; justify-content: space-between; font-weight: 700; color: #fff;">
+              <span>Sogeti part of Capgemini | Analyst A4</span>
+              <span style="color: var(--cyan); font-family: var(--font-mono); font-size: 0.85rem;">Aug 2024 – March
+                2026</span>
+            </div>
+            <ul style="padding-left: 20px; font-size: 0.9rem; color: #94a3b8; margin-top: 4px;">
+              <li>Built enterprise-grade multi-agent system for medical transcription using LLMs, ACP, and LangGraph.
+              </li>
+              <li>Integrated autonomous agents with hospital APIs and offline Docker setups.</li>
+              <li>Contributed to toolchain standardization using MCP protocol.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 20px;">
+          <h3
+            style="color: var(--cyan); font-family: var(--font-mono); font-size: 0.88rem; text-transform: uppercase; margin-bottom: 12px; letter-spacing: 0.05em;">
+            PROJECTS</h3>
+
+          <div style="margin-bottom: 12px;">
+            <div
+              style="display: flex; justify-content: space-between; font-weight: 700; color: #fff; font-size: 0.95rem;">
+              <span>Sales Acceleration - Alliant Group | Python, Langgraph, LangChain, Logic app, Salesforce</span>
+              <span style="color: var(--cyan); font-family: var(--font-mono); font-size: 0.82rem;">April 2025 -
+                running</span>
+            </div>
+            <ul style="padding-left: 20px; font-size: 0.88rem; color: #94a3b8; margin-top: 4px;">
+              <li>Reduced client research time by 80% through automated internet research and AI-generated opportunity
+                summaries integrated into daily emails for Relationship Directors.</li>
+              <li>Prioritizes opportunities using business rules and sends each RD personalized daily briefs on their
+                top 40 opportunities.</li>
+            </ul>
+          </div>
+
+          <div style="margin-bottom: 12px;">
+            <div
+              style="display: flex; justify-content: space-between; font-weight: 700; color: #fff; font-size: 0.95rem;">
+              <span>Med Assist - Johnson and Johnson project | Python, Langgraph, LangChain, Raspberry Pi</span>
+              <span style="color: var(--cyan); font-family: var(--font-mono); font-size: 0.82rem;">Jan 2026 - March
+                2026</span>
+            </div>
+            <ul style="padding-left: 20px; font-size: 0.88rem; color: #94a3b8; margin-top: 4px;">
+              <li>Connects with Jira and automatically generates epics, user stories, subtasks, and test cases from
+                provided requirements.</li>
+              <li>Reduces 40% documentation effort and speeds up project sprint planning.</li>
+            </ul>
+          </div>
+
+          <div style="margin-bottom: 12px;">
+            <div
+              style="display: flex; justify-content: space-between; font-weight: 700; color: #fff; font-size: 0.95rem;">
+              <span>Strava MedEdge - Johnson and Johnson project | Python, Langgraph, LangChain, Raspberry Pi</span>
+              <span style="color: var(--cyan); font-family: var(--font-mono); font-size: 0.82rem;">Jul 2025 - Jan
+                2026</span>
+            </div>
+            <ul style="padding-left: 20px; font-size: 0.88rem; color: #94a3b8; margin-top: 4px;">
+              <li>Engineered secure multi-agent system to analyze medical procedures and generate FHIR reports from
+                audio.</li>
+              <li>Designed containerized deployments for offline hospital network environments with zero internet
+                dependency.</li>
+              <li>Integrated ACP and MCP; human-in-the-loop achieved 90% improved clinical accuracy.</li>
+            </ul>
+          </div>
+
+          <div style="margin-bottom: 12px;">
+            <div
+              style="display: flex; justify-content: space-between; font-weight: 700; color: #fff; font-size: 0.95rem;">
+              <span>Multi-Agent System Framework | Python, Autogen Agents, SQL DB, FastAPI, MCP</span>
+              <span style="color: var(--cyan); font-family: var(--font-mono); font-size: 0.82rem;">Aug 2024 - Jul
+                2025</span>
+            </div>
+            <ul style="padding-left: 20px; font-size: 0.88rem; color: #94a3b8; margin-top: 4px;">
+              <li>Developed a no-code platform for building and deploying complex agentic workflows.</li>
+              <li>Leveraged MCP to standardize tool communication and enabled facial recognition with Computer Vision.
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <div
+              style="display: flex; justify-content: space-between; font-weight: 700; color: #fff; font-size: 0.95rem;">
+              <span>Plant Diagnosing Expert with CNN and Autogen | Python, TensorFlow CNN, Flask</span>
+              <span style="color: var(--cyan); font-family: var(--font-mono); font-size: 0.82rem;">Jan 2025</span>
+            </div>
+            <ul style="padding-left: 20px; font-size: 0.88rem; color: #94a3b8; margin-top: 4px;">
+              <li>Developed AI web app using CNN models to detect potato plant diseases with 95% accuracy.</li>
+              <li>Combined CNN detection with Autogen agents for real-time diagnosis and interactive advisory.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 20px;">
+          <h3
+            style="color: var(--cyan); font-family: var(--font-mono); font-size: 0.88rem; text-transform: uppercase; margin-bottom: 8px; letter-spacing: 0.05em;">
+            CERTIFICATIONS</h3>
+          <p style="font-size: 0.88rem; color: #94a3b8;">
+            Azure AI Engineer Associate &bull; Azure AI Fundamentals (AI900) &bull; Azure Fundamentals (AZ900) &bull;
+            Azure AI Language NLP Solution &bull; Azure AI Vision Solution &bull; Azure AI Document Intelligence
+          </p>
+        </div>
+
+        <div>
+          <h3
+            style="color: var(--cyan); font-family: var(--font-mono); font-size: 0.88rem; text-transform: uppercase; margin-bottom: 8px; letter-spacing: 0.05em;">
+            EDUCATION</h3>
+          <p style="font-size: 0.88rem; color: #cbd5e1;"><strong>B-Tech</strong> - Noida Institute of Engineering and
+            Technology (2020 - 2024)</p>
+          <p style="font-size: 0.88rem; color: #cbd5e1;"><strong>Intermediate</strong> - Fr. Agnel School, Greater Noida
+            (2020)</p>
+          <p style="font-size: 0.88rem; color: #cbd5e1;"><strong>High School</strong> - Alexander Public School, Meerut
+            (2018)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Main JavaScript Logic -->
+  <script src="app.js"></script>
+</body>
+
+</html>
