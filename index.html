@@ -1259,13 +1259,12 @@
        FULL RESUME PREVIEW MODAL
        ========================================================================== -->
   <div id="resume-modal" class="modal-backdrop">
-    <div class="modal-dialog" style="max-width: 900px;">
+    <div class="modal-dialog resume-modal-dialog">
       <button class="modal-close-btn" aria-label="Close modal">&times;</button>
 
-      <div
-        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--border-subtle);">
-        <h2 style="font-size: 1.8rem; font-weight: 800;">Curriculum Vitae</h2>
-        <div style="display: flex; gap: 10px;">
+      <div class="resume-modal-topbar">
+        <h2 class="resume-modal-title">Curriculum Vitae</h2>
+        <div class="resume-modal-actions">
           <button id="print-resume-btn" class="btn btn-sm btn-primary">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <polyline points="6 9 6 2 18 2 18 9"></polyline>
@@ -1278,13 +1277,10 @@
       </div>
 
       <!-- Rendered Resume Content matching exact CV -->
-      <div
-        style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 32px; font-family: var(--font-body); color: #e2e8f0; line-height: 1.6;">
-        <div
-          style="text-align: center; margin-bottom: 24px; padding-bottom: 18px; border-bottom: 1px solid var(--border-subtle);">
-          <h1 style="font-size: 2.2rem; font-weight: 900; margin-bottom: 6px; color: #fff;">Arif Alam Ansari</h1>
-          <div
-            style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; font-family: var(--font-mono); font-size: 0.82rem; color: var(--cyan);">
+      <div class="resume-card-body">
+        <div class="resume-header">
+          <h1 class="resume-name">Arif Alam Ansari</h1>
+          <div class="resume-contact-bar">
             <span>🐙 Arifalam786</span>
             <span>💼 ARIF ALAM ANSARI</span>
             <span>✉ arifalam3101@gmail.com</span>
@@ -1292,159 +1288,122 @@
           </div>
         </div>
 
-        <div style="margin-bottom: 20px;">
-          <h3
-            style="color: var(--cyan); font-family: var(--font-mono); font-size: 0.88rem; text-transform: uppercase; margin-bottom: 6px; letter-spacing: 0.05em;">
-            SUMMARY</h3>
-          <p style="font-size: 0.95rem; color: #cbd5e1;">
+        <div class="resume-section-block">
+          <h3 class="resume-section-heading">SUMMARY</h3>
+          <p class="resume-text">
             I am a Generative AI Engineer with 2 years of hands-on experience building secure, scalable multi-agent
             systems using LLMs, LangGraph, Autogen, and CrewAI. Skilled in designing agentic workflows, integrating RAG
             pipelines, and developing offline, containerized architectures for human-in-the-loop AI.
           </p>
         </div>
 
-        <div style="margin-bottom: 20px;">
-          <h3
-            style="color: var(--cyan); font-family: var(--font-mono); font-size: 0.88rem; text-transform: uppercase; margin-bottom: 8px; letter-spacing: 0.05em;">
-            SKILLS</h3>
-          <p style="font-size: 0.9rem; margin-bottom: 4px;"><strong>Languages:</strong> Python, JavaScript/TypeScript,
-            HTML/CSS, C#, SQL</p>
-          <p style="font-size: 0.9rem; margin-bottom: 4px;"><strong>Frameworks & Tools:</strong> Autogen, Langgraph,
-            Langchain, Crewai, Computer Vision, Flask, FastAPI, Tensorflow, Streamlit, Unsloth</p>
-          <p style="font-size: 0.9rem;"><strong>AI/ML & Cloud:</strong> RAG, SLM, LLMs (GPT, Claude, etc.), Vector
-            Databases, CNN, Tensorflow, Azure AI Studio, Prompt engineering, API integration, Cloud Deployment, LLM fine
-            tuning, Vector search, MLOps, Cursor AI, Claude code, Copilot Studio</p>
+        <div class="resume-section-block">
+          <h3 class="resume-section-heading">SKILLS</h3>
+          <p class="resume-text"><strong>Languages:</strong> Python, JavaScript/TypeScript, HTML/CSS, C#, SQL</p>
+          <p class="resume-text"><strong>Frameworks & Tools:</strong> Autogen, Langgraph, Langchain, Crewai, Computer Vision, Flask, FastAPI, Tensorflow, Streamlit, Unsloth</p>
+          <p class="resume-text"><strong>AI/ML & Cloud:</strong> RAG, SLM, LLMs (GPT, Claude, etc.), Vector Databases, CNN, Tensorflow, Azure AI Studio, Prompt engineering, API integration, Cloud Deployment, LLM fine tuning, Vector search, MLOps, Cursor AI, Claude code, Copilot Studio</p>
         </div>
 
-        <div style="margin-bottom: 20px;">
-          <h3
-            style="color: var(--cyan); font-family: var(--font-mono); font-size: 0.88rem; text-transform: uppercase; margin-bottom: 12px; letter-spacing: 0.05em;">
-            EXPERIENCE</h3>
+        <div class="resume-section-block">
+          <h3 class="resume-section-heading">EXPERIENCE</h3>
 
-          <div style="margin-bottom: 14px;">
-            <div style="display: flex; justify-content: space-between; font-weight: 700; color: #fff;">
-              <span>Alliant Group | AI Engineer</span>
-              <span style="color: var(--cyan); font-family: var(--font-mono); font-size: 0.85rem;">April 2026 -
-                Present</span>
+          <div class="resume-item">
+            <div class="resume-item-header">
+              <span class="resume-item-title">Alliant Group | AI Engineer</span>
+              <span class="resume-item-date">April 2026 - Present</span>
             </div>
-            <p style="font-size: 0.9rem; color: #94a3b8; margin-top: 4px;">
+            <p class="resume-subtext">
               Building AI agents and agentic workflows to automate business processes, eliminate repetitive tasks, and
               deploy scalable production solutions.
             </p>
           </div>
 
-          <div>
-            <div style="display: flex; justify-content: space-between; font-weight: 700; color: #fff;">
-              <span>Sogeti part of Capgemini | Analyst A4</span>
-              <span style="color: var(--cyan); font-family: var(--font-mono); font-size: 0.85rem;">Aug 2024 – March
-                2026</span>
+          <div class="resume-item">
+            <div class="resume-item-header">
+              <span class="resume-item-title">Sogeti part of Capgemini | Analyst A4</span>
+              <span class="resume-item-date">Aug 2024 – March 2026</span>
             </div>
-            <ul style="padding-left: 20px; font-size: 0.9rem; color: #94a3b8; margin-top: 4px;">
-              <li>Built enterprise-grade multi-agent system for medical transcription using LLMs, ACP, and LangGraph.
-              </li>
+            <ul class="resume-list">
+              <li>Built enterprise-grade multi-agent system for medical transcription using LLMs, ACP, and LangGraph.</li>
               <li>Integrated autonomous agents with hospital APIs and offline Docker setups.</li>
               <li>Contributed to toolchain standardization using MCP protocol.</li>
             </ul>
           </div>
         </div>
 
-        <div style="margin-bottom: 20px;">
-          <h3
-            style="color: var(--cyan); font-family: var(--font-mono); font-size: 0.88rem; text-transform: uppercase; margin-bottom: 12px; letter-spacing: 0.05em;">
-            PROJECTS</h3>
+        <div class="resume-section-block">
+          <h3 class="resume-section-heading">PROJECTS</h3>
 
-          <div style="margin-bottom: 12px;">
-            <div
-              style="display: flex; justify-content: space-between; font-weight: 700; color: #fff; font-size: 0.95rem;">
-              <span>Sales Acceleration - Alliant Group | Python, Langgraph, LangChain, Logic app, Salesforce</span>
-              <span style="color: var(--cyan); font-family: var(--font-mono); font-size: 0.82rem;">April 2025 -
-                running</span>
+          <div class="resume-item">
+            <div class="resume-item-header">
+              <span class="resume-item-title">Sales Acceleration - Alliant Group | Python, Langgraph, LangChain, Logic app, Salesforce</span>
+              <span class="resume-item-date">April 2025 - running</span>
             </div>
-            <ul style="padding-left: 20px; font-size: 0.88rem; color: #94a3b8; margin-top: 4px;">
-              <li>Reduced client research time by 80% through automated internet research and AI-generated opportunity
-                summaries integrated into daily emails for Relationship Directors.</li>
-              <li>Prioritizes opportunities using business rules and sends each RD personalized daily briefs on their
-                top 40 opportunities.</li>
+            <ul class="resume-list">
+              <li>Reduced client research time by 80% through automated internet research and AI-generated opportunity summaries integrated into daily emails for Relationship Directors.</li>
+              <li>Prioritizes opportunities using business rules and sends each RD personalized daily briefs on their top 40 opportunities.</li>
             </ul>
           </div>
 
-          <div style="margin-bottom: 12px;">
-            <div
-              style="display: flex; justify-content: space-between; font-weight: 700; color: #fff; font-size: 0.95rem;">
-              <span>Med Assist - Johnson and Johnson project | Python, Langgraph, LangChain, Raspberry Pi</span>
-              <span style="color: var(--cyan); font-family: var(--font-mono); font-size: 0.82rem;">Jan 2026 - March
-                2026</span>
+          <div class="resume-item">
+            <div class="resume-item-header">
+              <span class="resume-item-title">Med Assist - Johnson and Johnson project | Python, Langgraph, LangChain, Raspberry Pi</span>
+              <span class="resume-item-date">Jan 2026 - March 2026</span>
             </div>
-            <ul style="padding-left: 20px; font-size: 0.88rem; color: #94a3b8; margin-top: 4px;">
-              <li>Connects with Jira and automatically generates epics, user stories, subtasks, and test cases from
-                provided requirements.</li>
+            <ul class="resume-list">
+              <li>Connects with Jira and automatically generates epics, user stories, subtasks, and test cases from provided requirements.</li>
               <li>Reduces 40% documentation effort and speeds up project sprint planning.</li>
             </ul>
           </div>
 
-          <div style="margin-bottom: 12px;">
-            <div
-              style="display: flex; justify-content: space-between; font-weight: 700; color: #fff; font-size: 0.95rem;">
-              <span>Strava MedEdge - Johnson and Johnson project | Python, Langgraph, LangChain, Raspberry Pi</span>
-              <span style="color: var(--cyan); font-family: var(--font-mono); font-size: 0.82rem;">Jul 2025 - Jan
-                2026</span>
+          <div class="resume-item">
+            <div class="resume-item-header">
+              <span class="resume-item-title">Strava MedEdge - Johnson and Johnson project | Python, Langgraph, LangChain, Raspberry Pi</span>
+              <span class="resume-item-date">Jul 2025 - Jan 2026</span>
             </div>
-            <ul style="padding-left: 20px; font-size: 0.88rem; color: #94a3b8; margin-top: 4px;">
-              <li>Engineered secure multi-agent system to analyze medical procedures and generate FHIR reports from
-                audio.</li>
-              <li>Designed containerized deployments for offline hospital network environments with zero internet
-                dependency.</li>
+            <ul class="resume-list">
+              <li>Engineered secure multi-agent system to analyze medical procedures and generate FHIR reports from audio.</li>
+              <li>Designed containerized deployments for offline hospital network environments with zero internet dependency.</li>
               <li>Integrated ACP and MCP; human-in-the-loop achieved 90% improved clinical accuracy.</li>
             </ul>
           </div>
 
-          <div style="margin-bottom: 12px;">
-            <div
-              style="display: flex; justify-content: space-between; font-weight: 700; color: #fff; font-size: 0.95rem;">
-              <span>Multi-Agent System Framework | Python, Autogen Agents, SQL DB, FastAPI, MCP</span>
-              <span style="color: var(--cyan); font-family: var(--font-mono); font-size: 0.82rem;">Aug 2024 - Jul
-                2025</span>
+          <div class="resume-item">
+            <div class="resume-item-header">
+              <span class="resume-item-title">Multi-Agent System Framework | Python, Autogen Agents, SQL DB, FastAPI, MCP</span>
+              <span class="resume-item-date">Aug 2024 - Jul 2025</span>
             </div>
-            <ul style="padding-left: 20px; font-size: 0.88rem; color: #94a3b8; margin-top: 4px;">
+            <ul class="resume-list">
               <li>Developed a no-code platform for building and deploying complex agentic workflows.</li>
-              <li>Leveraged MCP to standardize tool communication and enabled facial recognition with Computer Vision.
-              </li>
+              <li>Leveraged MCP to standardize tool communication and enabled facial recognition with Computer Vision.</li>
             </ul>
           </div>
 
-          <div>
-            <div
-              style="display: flex; justify-content: space-between; font-weight: 700; color: #fff; font-size: 0.95rem;">
-              <span>Plant Diagnosing Expert with CNN and Autogen | Python, TensorFlow CNN, Flask</span>
-              <span style="color: var(--cyan); font-family: var(--font-mono); font-size: 0.82rem;">Jan 2025</span>
+          <div class="resume-item">
+            <div class="resume-item-header">
+              <span class="resume-item-title">Plant Diagnosing Expert with CNN and Autogen | Python, TensorFlow CNN, Flask</span>
+              <span class="resume-item-date">Jan 2025</span>
             </div>
-            <ul style="padding-left: 20px; font-size: 0.88rem; color: #94a3b8; margin-top: 4px;">
+            <ul class="resume-list">
               <li>Developed AI web app using CNN models to detect potato plant diseases with 95% accuracy.</li>
               <li>Combined CNN detection with Autogen agents for real-time diagnosis and interactive advisory.</li>
             </ul>
           </div>
         </div>
 
-        <div style="margin-bottom: 20px;">
-          <h3
-            style="color: var(--cyan); font-family: var(--font-mono); font-size: 0.88rem; text-transform: uppercase; margin-bottom: 8px; letter-spacing: 0.05em;">
-            CERTIFICATIONS</h3>
-          <p style="font-size: 0.88rem; color: #94a3b8;">
+        <div class="resume-section-block">
+          <h3 class="resume-section-heading">CERTIFICATIONS</h3>
+          <p class="resume-text resume-muted-text">
             Azure AI Engineer Associate &bull; Azure AI Fundamentals (AI900) &bull; Azure Fundamentals (AZ900) &bull;
             Azure AI Language NLP Solution &bull; Azure AI Vision Solution &bull; Azure AI Document Intelligence
           </p>
         </div>
 
-        <div>
-          <h3
-            style="color: var(--cyan); font-family: var(--font-mono); font-size: 0.88rem; text-transform: uppercase; margin-bottom: 8px; letter-spacing: 0.05em;">
-            EDUCATION</h3>
-          <p style="font-size: 0.88rem; color: #cbd5e1;"><strong>B-Tech</strong> - Noida Institute of Engineering and
-            Technology (2020 - 2024)</p>
-          <p style="font-size: 0.88rem; color: #cbd5e1;"><strong>Intermediate</strong> - Fr. Agnel School, Greater Noida
-            (2020)</p>
-          <p style="font-size: 0.88rem; color: #cbd5e1;"><strong>High School</strong> - Alexander Public School, Meerut
-            (2018)</p>
+        <div class="resume-section-block">
+          <h3 class="resume-section-heading">EDUCATION</h3>
+          <p class="resume-text"><strong>B-Tech</strong> - Noida Institute of Engineering and Technology (2020 - 2024)</p>
+          <p class="resume-text"><strong>Intermediate</strong> - Fr. Agnel School, Greater Noida (2020)</p>
+          <p class="resume-text"><strong>High School</strong> - Alexander Public School, Meerut (2018)</p>
         </div>
       </div>
     </div>

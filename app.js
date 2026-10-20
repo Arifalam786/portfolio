@@ -357,6 +357,9 @@
 
   // --- 3D Card Tilt Physics ---
   function setupTiltCards() {
+    const isHoverDevice = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+    if (!isHoverDevice || window.innerWidth < 768) return;
+
     const cards = document.querySelectorAll('[data-tilt]');
     cards.forEach((card) => {
       card.addEventListener('mousemove', (e) => {
@@ -394,7 +397,7 @@
   const heroCard = document.getElementById('hero-card');
   const floatingBadges = document.querySelectorAll('.floating-badge');
 
-  if (heroStage && heroCard) {
+  if (heroStage && heroCard && window.matchMedia('(hover: hover) and (pointer: fine)').matches && window.innerWidth >= 768) {
     heroStage.addEventListener('mousemove', (e) => {
       const rect = heroStage.getBoundingClientRect();
       const x = e.clientX - rect.left - rect.width / 2;
@@ -828,7 +831,7 @@ def diagnose_leaf_pathology(image_path: str):
           </div>
         </div>
 
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 24px;">
+        <div class="modal-challenge-grid">
           <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 18px;">
             <h4 style="color: #f87171; margin-bottom: 8px; font-size: 0.95rem;">⚠ Challenge & Problem</h4>
             <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">${data.problem}</p>
